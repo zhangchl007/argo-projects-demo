@@ -82,7 +82,7 @@ The `ApplicationSet` is using json file generators to generate the two correspon
 spec:
   generators:
     - git:
-        repoURL: https://github.com/AmadeusITGroup/argo-projects-demo.git
+        repoURL: https://github.com/zhangchl007/argo-projects-demo.git
         revision: HEAD
         files:
           - path: "argo-projects/app/generators/*.json"

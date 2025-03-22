@@ -2,10 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: app
+  nammespace: argocd
 spec:
   generators:
     - git:
-        repoURL: https://github.com/AmadeusITGroup/argo-projects-demo.git
+        repoURL: https://github.com/zhangchl007/argo-projects-demo.git
         revision: HEAD
         files:
           - path: "argo-projects/app/generators/*.json"
@@ -17,7 +18,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/AmadeusITGroup/argo-projects-demo.git
+        repoURL: https://github.com/zhangchl007/argo-projects-demo.git
         targetRevision: 'HEAD'
         path: 'argo-projects/app/manifests/base'
         helm:
