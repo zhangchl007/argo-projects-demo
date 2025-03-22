@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: app
-  nammespace: argocd
 spec:
   generators:
     - git:
@@ -13,6 +12,7 @@ spec:
   template:
     metadata:
       name: 'app-{{ phase }}'
+      namespace: 'app-{{ phase }}'
       annotations:
         notifications.argoproj.io/subscribe.on-sync-success.sync-webhook: "" 
     spec:
